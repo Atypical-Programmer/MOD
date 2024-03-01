@@ -42,7 +42,7 @@ __Figure 4__. Hierarchical structure of photo-patch dataset. The image files und
 
 ## Download
 
-You can download the Moorea Orthophoto Dataset [here](https://markdown.com.cn).
+You can download the Moorea Orthophoto Dataset [here](https://drive.google.com/file/d/1NDjlzSAjI-HlSRWbrXQecHK3rORfm-Tv/view?usp=sharing).
 
 ## Publications
 Examples of peer-reviewed publications based on this dataset:
