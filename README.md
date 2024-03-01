@@ -6,6 +6,7 @@
 The goal of the Moorea Island Digital Ecosystem Avatar Research Program is to explore the impact of external drivers, such as disturbances and global climate change, on the resilience of coral reefs. Photogrammetric surveys have been conducted in several reef tracts of Moorea since 2005, typically at a depth of around 10 meters. During regular field surveys, a camera system is utilized that captures time series data with high image overlap from five different points of view. Additionally, the system collects camera altitude data from the reef substrate and GPS data to facilitate more precise 3D reconstructions.
 
 ![Field study with a camera system.](./media/image1.jpg)
+
 __Figure 1__. Field study with a camera system.
 
 ## Dataset Description
@@ -14,6 +15,7 @@ __Figure 1__. Field study with a camera system.
 - It includes human-classified semantic annotations for training and validation images, featuring two primary coral classes (Acropora and Pocillopora) and three health states (live coral, dead coral, and bleached coral). All data were systematically gathered in Moorea, French Polynesia (17°30′S, 149°50′W) during the period spanning from 2017 to 2019.
 
 ![Location of the survey (red dot).](./media/image2.png)
+
 __Figure 2__. Location of the survey (red dot). Background imagery reproduced from the Google Earth (https://www.google.cn/intl/zh-en/earth).
 
 ## Methodology
@@ -23,6 +25,7 @@ Calibration parameters were set for each camera at a test site to ensure consist
 Image annotation was performed using the semi-automated annotation tool, TagLab (more details at https://github.com/cnr-isti-vclab/TagLab). When selecting four points at the extremities of each object, the interactive segmentation model discerns and delineates the intricate contours of the coral's complex zones. Subsequent to contour generation, the utilization of an automatic refinement tool (Ctrl+R) enhances segmentation precision. TagLab’s interactive annotation interface is shown in Figure 3.
 
 ![Interactive annotation interface of TagLab.](./media/image3.png)
+
 __Figure 3__. Interactive annotation interface of TagLab. The toolbar is located on the left side, and the color label and number of markers are displayed on the right side. For convenience, we have assigned the tag for 'pocillopora' as 'living coral' in our labeling system. For a detailed information of classes and their corresponding RGB values, please refer to the README.md.
 
 ## Dataset Organization
@@ -30,6 +33,7 @@ __Figure 3__. Interactive annotation interface of TagLab. The toolbar is located
 - __Organization and Size__: The image patches in this dataset are sampled from images of the same geographical area over a period of three years using the Poisson sampling method. The images are in JPG format, and the files are grouped according to annotation standards. The task labeled with different health states contains 2,797 patches, each with a size of 300x300 pixels, and the task labeled with different genera contains 1,213 patches, also each with a size of 300x300 pixels. To facilitate data management, image patches, image annotations, and depth images related to each task are stored in separate folders. See Figure 4 for the hierarchical structure of the dataset.
 
 ![Hierarchical structure of photo-patch dataset.](./media/image4.png)
+
 __Figure 4__. Hierarchical structure of photo-patch dataset. The image files under each task correspond to different image annotations. Since Poisson disk sampling is used, the image patches sampled by each task are not the same.
 
 - __Naming Convention__: Each image file within this dataset is meticulously structured and comprises three distinct components delineated by underscores. These components include the category to which the sampling center pertains, the year in which the image was captured, and finally, the unique serial number assigned to each image. Examples that follow this nomenclature include: pocill17_1, acro18_3, bleach19_19, dead18_288, and live17_282. 
